@@ -1,5 +1,5 @@
 # Cascade2× vs. Baseline EDSR — project guide
-
+Authors: Maxim Piscklich (318232733), Lidor Mizrahi (318877610)
 ## Overview
 
 This repository reproduces the **Cascade2×** progressive super‑resolution model, compares it with the classic **EDSR‑baseline ×4**, and supplies compact utilities for training, evaluation, qualitative inspection and metric aggregation on the DIV2K dataset.
@@ -29,6 +29,7 @@ Install all runtime dependencies in one go:
 
 ```bash
 pip install torch torchvision torchaudio numpy matplotlib pillow scikit-image torchmetrics kaggle tqdm
+pip install torch-fidelity
 ```
 
 >To run with GPU use the CUDA‑specific: `pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118`
@@ -149,11 +150,7 @@ Adjust the flags at the bottom of the file to toggle:
 Plot L1‑loss and PSNR curves that **train.py** stores in every `log_seed*.npy`.
 
 ```bash
-# quickest – glob all logs
-python log_view.py checkpoints/seed*/log_seed*.npy
-
-# or name specific files
-python log_view.py checkpoints/seed0/log_seed0.npy checkpoints/seed1/log_seed1.npy
+python log_view.py checkpoints/seed0/log_seed0.npy checkpoints/seed1/log_seed1.npy checkpoints/seed2/log_seed2.npy
 ```
 
 Produces side‑by‑side L1 and PSNR plots for every seed.
