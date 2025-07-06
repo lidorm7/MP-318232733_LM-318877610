@@ -1,6 +1,6 @@
 """
 Compare Baseline-EDSR ×4 vs. Cascade2×
-Authors: Maxim Piscklich • Lidor Mizrahi
+Authors: Maxim Piscklich (318232733), Lidor Mizrahi (318877610)
 """
 import os
 from pathlib import Path
