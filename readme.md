@@ -1,5 +1,5 @@
 # Cascade2× vs. Baseline EDSR — project guide
-
+Authors: Maxim Piscklich (318232733), Lidor Mizrahi (318877610)
 ## Overview
 
 This repository reproduces the **Cascade2×** progressive super‑resolution model, compares it with the classic **EDSR‑baseline ×4**, and supplies compact utilities for training, evaluation, qualitative inspection and metric aggregation on the DIV2K dataset.
